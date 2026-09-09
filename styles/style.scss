@@ -107,7 +107,10 @@ a {
 .navigation {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: calc(var(--default-padding) * 2);
+  // flex: 1;
+  // margin-left: calc(var(--default-padding) * 3);
 
   @media (max-width: 600px) {
     display: none;
@@ -263,6 +266,10 @@ a {
     box-shadow: 0 0.4rem 0.8rem 0.2rem rgba(0, 0, 0, 0.1);
     border-radius: var(--default-radius);
     padding: var(--default-padding) calc(var(--default-padding) * 1);
+
+    @media (max-width: 600px) {
+      padding: 1.2rem 0rem;
+    }
   }
 
   &__features {
@@ -316,7 +323,7 @@ a {
   gap: 1rem;
 
   @media (max-width) {
-    gap: 0;
+    gap: 0.4rem;
   }
 
   &__icon {
@@ -328,13 +335,14 @@ a {
   &__text {
     display: flex;
     flex-direction: column;
+    min-width: 0;
   }
 
   &__number {
     color: black;
 
     @media (max-width: 600px) {
-      font-size: 1.5rem;
+      font-size: 1.2rem;
     }
   }
 
@@ -342,7 +350,7 @@ a {
     color: var(--color-slate-grey);
 
     @media (max-width: 600px) {
-      font-size: 1.5rem;
+      font-size: 1rem;
     }
   }
 }
@@ -778,6 +786,8 @@ a {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
+    gap: 1rem 2rem;
     gap: calc(var(--default-padding) / 2) calc(var(--default-padding) * 1.5);
     top: 100%;
   }
